@@ -1,7 +1,7 @@
 package org.example;
 
 public class Board {
-    private static char[][] cells;
+    private char[][] cells;
 
     public Board() {
         cells = new char[3][3];
@@ -29,16 +29,16 @@ public class Board {
         return true;
     }
 
+    public char getCell(int x, int y) {
+        return cells[x][y];
+    }
+
     public void clear() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 cells[i][j] = ' ';
             }
         }
-    }
-
-    public static char getCell(int x, int y) {
-        return cells[x][y];
     }
 
     public void print() {
